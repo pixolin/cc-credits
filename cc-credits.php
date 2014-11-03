@@ -9,7 +9,7 @@ License: GPL2
 Text Domain: cc-credits
 Domain Path: /languages/
 GitHub Plugin URI: https://github.com/pixolin/cc-credits
-GutHub Branch: master
+GitHub Branch: master
 */
 
 /*
