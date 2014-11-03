@@ -8,8 +8,6 @@ Version: 1.0
 License: GPL2
 Text Domain: cc-credits
 Domain Path: /languages/
-GitHub Plugin URI: https://github.com/pixolin/cc-credits
-GitHub Branch: master
 */
 
 /*
