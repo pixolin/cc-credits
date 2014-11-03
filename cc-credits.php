@@ -123,7 +123,7 @@ function ccc_save_meta($post_id) {
         $old = get_post_meta($post_id, $field['id'], true);
         $new = $_POST[$field['id']];
         if ($new && $new != $old) {
-            update_post_meta($post_id, $field['id'], $new);
+            update_post_meta($post_id, $field['id'], wp_kses( $new, $allowed_html ) );
         } elseif ('' == $new && $old) {
             delete_post_meta($post_id, $field['id'], $old);
         }
