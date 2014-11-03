@@ -120,12 +120,10 @@ function ccc_save_meta($post_id) {
 
     // loop through fields and save the data
     foreach ($custom_meta_fields as $field) {
-        $old = get_post_meta($post_id, $field['id'], true);
-        $new = $_POST[$field['id']];
-        if ($new && $new != $old) {
-            update_post_meta($post_id, $field['id'], wp_kses( $new, $allowed_html ) );
-        } elseif ('' == $new && $old) {
-            delete_post_meta($post_id, $field['id'], $old);
+        if(isset($_POST[$field['id']];)) {
+            update_post_meta($post_id, $field['id'], wp_kses( $_POST[$field['id']], $allowed_html ));
+        } else {
+            delete_post_meta($post_id, $field['id']);
         }
     } // end foreach
 }
