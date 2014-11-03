@@ -38,31 +38,31 @@ $custom_meta_fields = array(
         'type'  => 'select',
         'options' => array (
             'None' => array (
-                'label' => 'None/Public Domain',
+                'label' => __('None/Public Domain', 'cc-credits'),
                 'value' => ''
             ),
             'BY' => array (
-                'label' => 'Attribution',
+                'label' => __('Attribution', 'cc-credits'),
                 'value' => 'BY'
             ),
             'BY-SA' => array (
-                'label' => 'Attribution ShareAlike',
+                'label' => __('Attribution | ShareAlike', 'cc-credits'),
                 'value' => 'BY-SA'
             ),
             'BY-ND' => array (
-                'label' => 'Attribution NoDerivs',
+                'label' => __('Attribution | NoDerivs', 'cc-credits'),
                 'value' => 'BY-ND'
             ),
             'BY-NC' => array (
-                'label' => 'Attribution NonCommercial',
+                'label' => __('Attribution | NonCommercial', 'cc-credits'),
                 'value' => 'BY-NC'
             ),
             'BY-NC-SA' => array (
-                'label' => 'Attribution NonCommercial ShareAlike',
+                'label' => __('Attribution | NonCommercial | ShareAlike', 'cc-credits'),
                 'value' => 'BY-NC-SA'
             ),
             'BY-NC-ND' => array (
-                'label' => 'Attribution NonCommercial NoDerivs',
+                'label' => __('Attribution | NonCommercial | NoDerivs', 'cc-credits'),
                 'value' => 'BY-NC-ND'
             )
         )

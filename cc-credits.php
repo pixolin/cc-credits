@@ -32,6 +32,9 @@ Domain Path: /languages/
 defined('ABSPATH') or die();
 
 
+load_plugin_textdomain( 'cc-credits', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+
 // require file with meta box fields
 require_once('cc-fields.php');
 
