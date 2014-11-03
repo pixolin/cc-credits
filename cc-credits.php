@@ -148,8 +148,16 @@ function ccc_get_post_custom($post_id) {
         $ccc_license = $ccc['ccc_license'][0];
         $ccc_version = $ccc['ccc_version'][0];
 
+        //check if URL contains http:// or https:// and add, if it doesn't
+        $ccc_url_scheme = parse_url( $ccc_url );
+        if ( empty( $ccc_url_scheme['scheme'] ) ) {
+            $ccc_url = 'http://' . $ccc_url;
+        }
+
+
+
         return '<hr>'.
-                __('Image', 'cc-credits').': <a href="http://'.$ccc_url.'">'.$ccc_image.'</a>
+                __('Image', 'cc-credits').': <a href="'.esc_url($ccc_url).'">'.$ccc_image.'</a>
                 &copy' .$ccc_year.' '.$ccc_author.',
                 <a href="http://creativecommons.org/licenses/'.strtolower($ccc_license).'/'.$ccc_version.'" target="_blank" rel="nofollow">CC '.$ccc_license.'</a>,
                 '.$ccc_version;
