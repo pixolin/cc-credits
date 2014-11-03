@@ -120,7 +120,7 @@ function ccc_save_meta($post_id) {
 
     // loop through fields and save the data
     foreach ($custom_meta_fields as $field) {
-        if(isset($_POST[$field['id']];)) {
+        if(isset($_POST[$field['id']])) {
             update_post_meta($post_id, $field['id'], wp_kses( $_POST[$field['id']], $allowed_html ));
         } else {
             delete_post_meta($post_id, $field['id']);
