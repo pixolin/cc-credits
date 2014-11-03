@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CC Credits\n"
-"POT-Creation-Date: 2014-11-03 10:59+0100\n"
+"POT-Creation-Date: 2014-11-03 11:15+0100\n"
 "PO-Revision-Date: 2014-11-03 11:27+0100\n"
 "Last-Translator: Pixolin <pixolin@gmx.com>\n"
 "Language-Team: Pixolin <pixolin@gmx.com>\n"
-"Language: de_DE\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,24 +15,25 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,11,-1,-1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: cc-credits.php:158
 msgid "Image"
-msgstr "Bild"
+msgstr "Image"
 
 #: cc-fields.php:12
 msgid "Title of Image"
-msgstr "Bildtitel"
+msgstr "Titre de l'image"
 
 #: cc-fields.php:18
 msgid "Year of Creation"
-msgstr "Erstellungsjahr"
+msgstr "Année de création"
 
 #: cc-fields.php:24
 msgid "Author"
-msgstr "Autor"
+msgstr "Auteur"
 
 #: cc-fields.php:30
 msgid "URL"
@@ -40,35 +41,37 @@ msgstr "URL"
 
 #: cc-fields.php:36
 msgid "License"
-msgstr "Lizenz"
+msgstr "Licence"
 
 #: cc-fields.php:41
 msgid "None/Public Domain"
-msgstr "Keine/Public Domain"
+msgstr "nul/domaine public"
 
 #: cc-fields.php:45
 msgid "Attribution"
-msgstr "Namensnennung"
+msgstr "Attribution"
 
 #: cc-fields.php:49
 msgid "Attribution | ShareAlike"
-msgstr "Namensnennung | GleicheBedingungen"
+msgstr "Attribution | Partage dans les Mêmes Conditions"
 
 #: cc-fields.php:53
 msgid "Attribution | NoDerivs"
-msgstr "Namensnennung | KeineBearbeitung"
+msgstr "Attribution | Pas de Modification"
 
 #: cc-fields.php:57
 msgid "Attribution | NonCommercial"
-msgstr "Namensnennung | NichtKommerziell"
+msgstr "Attribution | Pas d’Utilisation Commerciale"
 
 #: cc-fields.php:61
 msgid "Attribution | NonCommercial | ShareAlike"
-msgstr "Namensnennung | NichtKommerziell | GleicheBedinungen"
+msgstr ""
+"Attribution | Pas d’Utilisation Commerciale | Partage dans les Mêmes "
+"Conditions"
 
 #: cc-fields.php:65
 msgid "Attribution | NonCommercial | NoDerivs"
-msgstr "Namensnennung | Nichtkommerziell | KeineBearbeitung"
+msgstr "Attribution | Pas d’Utilisation Commerciale | Pas de Modification"
 
 #: cc-fields.php:71
 msgid "Version"
