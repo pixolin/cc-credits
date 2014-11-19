@@ -4,7 +4,7 @@ Plugin Name: CC Credits
 Description: Adds a meta box for credits for Creative Commons content.
 Author: Bego Mario Garde
 Author URI: http://garde-medienberatung.de
-Version: 1.0
+Version: 1.0.1
 License: GPL2
 Text Domain: cc-credits
 Domain Path: /languages/
@@ -157,7 +157,7 @@ function ccc_get_post_custom($post_id) {
         return '<hr>'.
                 __('Image', 'cc-credits').': <a href="'.esc_url($ccc_url).'">'.$ccc_image.'</a>
                 &copy' .$ccc_year.' '.$ccc_author.',
-                <a href="http://creativecommons.org/licenses/'.strtolower($ccc_license).'/'.$ccc_version.'" target="_blank" rel="nofollow">CC '.$ccc_license.'</a>,
+                <a href="http://creativecommons.org/licenses/'.strtolower($ccc_license).'/'.$ccc_version.'" target="_blank" rel="nofollow">CC-'.$ccc_license.'</a>,
                 '.$ccc_version;
     }
 
