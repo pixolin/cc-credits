@@ -38,11 +38,15 @@ load_plugin_textdomain( 'cc-credits', false, dirname( plugin_basename( __FILE__ 
 // require file with meta box fields
 require_once('cc-fields.php');
 
+// use Class CC_Credits
+$ccc = new CC_Credits();
+
+
 // Add the Meta Box
 function ccc_add_metabox() {
 
     // define Post Types that will show Meta Box
-    $post_types = array( 'post', 'page' ); //could be extended for Custom Post Types
+    $post_types = array( 'post', 'page' ); //could be extended for Custom Post Type(s)
 
     foreach( $post_types as $post_type ) {
         add_meta_box(
@@ -61,7 +65,7 @@ add_action('add_meta_boxes', 'ccc_add_metabox');
 // Callback function for meta box – shows the form in Back End
 function ccc_meta_box() {
 
-    global $custom_meta_fields, $post;
+    global $ccc, $post;
 
     // Use nonce for verification
     //echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
@@ -69,7 +73,7 @@ function ccc_meta_box() {
 
     // Begin the field table and loop
     echo '<table class="form-table">';
-    foreach ($custom_meta_fields as $field) {
+    foreach ($ccc->custom_meta_fields as $field) {
         // get value of this field if it exists for this post
         $meta = get_post_meta($post->ID, $field['id'], true);
         // begin a table row with
@@ -101,7 +105,7 @@ function ccc_meta_box() {
 
 // Save the Data
 function ccc_save_meta($post_id) {
-    global $custom_meta_fields;
+    global $ccc;
 
     // verify nonce
     if (!isset($_POST['custom_meta_box_nonce']) ||
@@ -119,7 +123,7 @@ function ccc_save_meta($post_id) {
     }
 
     // loop through fields and save the data
-    foreach ($custom_meta_fields as $field) {
+    foreach ($ccc->custom_meta_fields as $field) {
         if(!empty($_POST[$field['id']])) {
             update_post_meta($post_id, $field['id'], wp_kses( $_POST[$field['id']], $allowed_html ));
         } else {
@@ -137,14 +141,14 @@ add_action('save_post', 'ccc_save_meta');
 function ccc_get_post_custom($post_id) {
 
 
-   $ccc = get_post_custom($post_id);
+   $ccc_fields = get_post_custom($post_id);
     if(!empty($ccc['ccc_license'][0])) {
-        $ccc_url     = $ccc['ccc_url'][0];
-        $ccc_image   = $ccc['ccc_image'][0];
-        $ccc_year    = $ccc['ccc_year'][0];
-        $ccc_author  = $ccc['ccc_author'][0];
-        $ccc_license = $ccc['ccc_license'][0];
-        $ccc_version = $ccc['ccc_version'][0];
+        $ccc_url     = $ccc_fields['ccc_url'][0];
+        $ccc_image   = $ccc_fields['ccc_image'][0];
+        $ccc_year    = $ccc_fields['ccc_year'][0];
+        $ccc_author  = $ccc_fields['ccc_author'][0];
+        $ccc_license = $ccc_fields['ccc_license'][0];
+        $ccc_version = $ccc_fields['ccc_version'][0];
 
         //check if URL contains http:// or https:// and add, if it doesn't
         $ccc_url_scheme = parse_url( $ccc_url );

@@ -16,31 +16,31 @@ class CC_Credits {
         $this->custom_meta_fields = array(
             array(
                 'label'=> __('Title of Image', 'cc-credits'),
-                'id'    => $prefix.'image',
+                'id'    => $this->prefix.'image',
                 'type'  => 'text'
             ),
 
             array(
                 'label'=> __('Year of Creation', 'cc-credits'),
-                'id'    => $prefix.'year',
+                'id'    => $this->prefix.'year',
                 'type'  => 'text'
             ),
 
             array(
                 'label'=> __('Author', 'cc-credits'),
-                'id'    => $prefix.'author',
+                'id'    => $this->prefix.'author',
                 'type'  => 'text'
             ),
 
             array(
                 'label'=> __('URL', 'cc-credits'),
-                'id'    => $prefix.'url',
+                'id'    => $this->prefix.'url',
                 'type'  => 'text'
             ),
 
             array(
                 'label'=> __('License', 'cc-credits'),
-                'id'    => $prefix.'license',
+                'id'    => $this->prefix.'license',
                 'type'  => 'select',
                 'options' => array (
                     'None' => array (
@@ -76,7 +76,7 @@ class CC_Credits {
 
             array(
                 'label'=> __('Version', 'cc-credits'),
-                'id'    => $prefix.'version',
+                'id'    => $this->prefix.'version',
                 'type'  => 'select',
                 'options' => array (
 
